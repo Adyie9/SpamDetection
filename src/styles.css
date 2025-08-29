@@ -6,12 +6,19 @@ body {
   /* Background image + fallback */
   background: url("./assets/bgi.jpeg") no-repeat center center fixed;
   background-size: cover;
-  background-color: #f8f9fa; /* fallback if image not found */
+  background-color: #89d3ee; /* fallback if image not found */
+
+  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-x: hidden;
 }
 
 .app {
   max-width: 600px;
-  margin: auto;
+  width: 100%;
   margin-top: 95px;
   padding: 20px;
 
@@ -29,7 +36,8 @@ h1 {
 }
 
 input {
-  width: 97%;
+  width: 100%;
+  box-sizing: border-box; /* ✅ prevents overflow */
   padding: 12px;
   margin-top: 8px;
   border-radius: 5px;
